@@ -1,10 +1,18 @@
 @MinimalAPI.Example_HostAddress = https://localhost:7095
 
-GET {{MinimalAPI.Example_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{MinimalAPI.Example_HostAddress}}/books
 
 ###
 
-GET {{MinimalAPI.Example_HostAddress}}/books
+POST {{MinimalAPI.Example_HostAddress}}/books
+Content-Type : application/json
+{
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt"
+}
+###
+
+GET {{MinimalAPI.Example_HostAddress}}/books/{id:guid}
 
 ###

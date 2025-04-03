@@ -5,7 +5,7 @@ namespace MinimalAPI.Example.Services.Concrete;
 
 public sealed class BookService : IBookService
 {
-    private readonly List<Book> _books;
+    private List<Book> _books;
     public BookService()
     {
         _books = new List<Book>()
@@ -15,6 +15,13 @@ public sealed class BookService : IBookService
             new Book(Guid.NewGuid(),"Martin Eden","Jack London"),
         };
     }
+
+    public bool CreateBook(Book book)
+    {
+        _books.Add(book);
+        return true;
+    }
+
     public Book GetBook(Guid id)
     {
         return _books.Find(x => x.id == id) ?? throw new Exception("Book not found");

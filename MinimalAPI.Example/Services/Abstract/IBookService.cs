@@ -6,5 +6,6 @@ namespace MinimalAPI.Example.Services.Abstract
     {
         List<Book> GetBooks();
         Book GetBook(Guid id);
+        bool CreateBook(Book book);
     }
 }
