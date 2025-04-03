@@ -1,6 +1,10 @@
-@MinimalAPI.Example_HostAddress = http://localhost:5138
+@MinimalAPI.Example_HostAddress = https://localhost:7095
 
 GET {{MinimalAPI.Example_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{MinimalAPI.Example_HostAddress}}/books
 
 ###
